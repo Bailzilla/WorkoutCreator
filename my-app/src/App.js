@@ -1,56 +1,42 @@
-import React, { useState } from 'react';
-import CardList from './CardList';
 import './App.css';
-import { lifts } from './lifts.js';
-
-//update the <p> with id='add' to display the name and image of a random exercise from the clicked button value(object.type)
-// function addLift(val){
-//     const rando = Math.floor(Math.random() * 5)    
-//     const result = lifts.filter(lift => lift.type === val)
-//     let exercise = result[rando]
-//     // console.log(result[rando].src) 
-//     // document.getElementById('add').src = result[rando].src
-//     }
+import { lifts } from './lifts';
+import React, {useState} from 'react'
+import Card from './Card'
 
 function App() {
-  const [routine, setRoutine] = useState([])
-  const [selected, setSelected] = useState('')
-  const addLift = (value) => {
-      // need to write this part
-  }
-  console.log({selected});
-  const filteredRoutine = routine;
-  setRoutine() //where to call? what to pass?
-  
-  
-  // !routine.length ?
+  const rando = Math.floor(Math.random() * 5)  
+  let count = 9
+  const [resPic, setResPic] = 
+  useState('https://images.unsplash.com/photo-1579364046732-c21c2177730d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')
+  const [resName, setResName] = useState('Welcome')
+  let routine = [{type: 'push', name: 'test', src:'test'}]
 
-  //   <button className='button' value ="push" onClick={e => setSelected(e.target.value)}>Add push exercise</button> :
-  return (
-      <div className="App">
-          <header className="App-header">
-            <h2 id='quote'></h2>
-          </header>
+  function addLift(value){
+    const result = lifts.filter(lift => lift.type === value)
+    setResPic(result[rando].src)
+    setResName(result[rando].name)
 
-          {/* 4 buttons used to add an exercise of their corresponding type  */}
-            {/* <div className = 'container'>
-              <button className='button' value ="push" onClick={e => addLift(e.target.value)}>Add push exercise</button>
-              <button className='button' value="pull" onClick={e => addLift(e.target.value)}>Add pull exercise</button>
-              <button className='button' value="anterior" onClick={e => addLift(e.target.value)}>Add anterior lower body exercise</button>
-              <button className='button' value="posterior" onClick={e => addLift(e.target.value)}>Add posterior lower body exercise</button>
-            </div> */}
-          
-          {/* image being changed during addLift call */}
-            {/* <img id='add' src='' className="App-logo" alt="exercise" /> */}
-          
-
-            <button className='button' value="pull" onClick={e => addLift(e.target.value)}>Add pull exercise</button>
-            <CardList routine={filteredRoutine} />
-
-        </div>
-  
-    );
+    routine.push({type: value, name: result[rando].name, src: result[rando].src}) 
+    console.log(routine[1].type)
+    count++
+    console.log(count)
     
+   }
+  return (
+    <div className='tc'>
+      <h2 id='quote'> </h2>
+
+      <div>        
+        <button className='button grow bg-light-green' value='push' onClick= {(e) => addLift(e.target.value)}>Select a push exercise</button>
+        <button className='button grow bg-light-green' value="pull" onClick={(e) => addLift(e.target.value)}>Select a pull exercise</button>
+        <button className='button grow bg-light-green' value="anterior" onClick={(e) => addLift(e.target.value)}>Select an anterior lower body exercise</button>
+        <button className='button grow bg-light-green' value="posterior" onClick={(e) => addLift(e.target.value)}>Select a posterior lower body exercise</button>
+        <h6>please choose no more than 1 of the same exercise in a row</h6>
+      </div>
+      
+      <Card pic={resPic} name={resName}/>
+    </div>
+  )
 }
 
 export default App;
