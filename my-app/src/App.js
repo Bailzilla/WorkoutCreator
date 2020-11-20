@@ -32,7 +32,7 @@ function App() {
 
       <h6>please choose no more than 1 of the same exercise in a row</h6>
 
-      {/* calling our new component and passing the image and name values */}
+      {/* calling our new component and passing the image and name */}
       <Card pic={resPic} name={resName}/>
 
     </div>
