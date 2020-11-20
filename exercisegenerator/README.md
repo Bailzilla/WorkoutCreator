@@ -2,7 +2,7 @@
 
 To begin: 
 1. Clone https://github.com/Bailzilla/WorkoutCreator
-2. Make sure you are in the 'my-app' directory
+2. Make sure you are in the 'exercisegenerator' directory
 3. run `npm install`
 4. run `npm start`
 
