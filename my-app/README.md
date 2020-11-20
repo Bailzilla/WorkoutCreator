@@ -2,13 +2,14 @@
 
 To begin: 
 1. Clone https://github.com/Bailzilla/WorkoutCreator
-2. run `npm install`
-3. run `npm start`
+2. Make sure you are in the 'my-app' directory
+3. run `npm install`
+4. run `npm start`
 
 You can also follow https://bailzilla.github.io/WorkoutCreator/ to view a working render of the app in a browser.
 
 ## What is this project?
-The idea for this project came to me in an hour of overwhelming frustration. Exercising has always been an escape for me, yet it got to the point where putting in the time to choose which exercises to perform seemed like a chore in itself. That's why I created this app: I wanted to have a quick place to go and say give me a random push exercise and a random anterior lower body exercise to do for today. With this app, all you have to do is click a button, and the app will deliver you an exercise of that given type, along with an image to jog your memory for performing the movement.
+The idea for this project came to me in an hour of overwhelming frustration. Exercising has always been an escape for me, yet it got to the point where putting in the time to choose which exercises to perform seemed like a chore in itself. That's why I created this app: I wanted to have a quick place to go and say - give me a random push exercise and a random anterior lower body exercise to do for today. With this app, all you have to do is click a button, and the app will deliver you an exercise of that given type - along with an image to jog your memory for performing the movement.
 
 ### Requirements
 1. Responsive design: this app uses CSS Flexbox, along with Media Queries, to render itself on different viewports. For smaller screens, the quote text size and overall space is reduced(font size and margin), as well as the buttons stack on top of each other. When the screen size increases, the quote at the top is larger and the buttons reconfigure to fit the screen in a more appealing way. 
