@@ -1,1 +1,1 @@
-# please cd into my-app to get started
+# please open my-app to get started
