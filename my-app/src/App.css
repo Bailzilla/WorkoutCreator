@@ -40,6 +40,8 @@ h6 {
   flex-direction: column;
 }
 
+/* these queries enhance responsiveness by resizing the quote section and spreading out the buttons */
+
 @media (min-width: 550px) {
 
   #quote {

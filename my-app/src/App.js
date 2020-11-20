@@ -3,13 +3,16 @@ import { lifts } from './lifts';
 import React, {useState} from 'react'
 import Card from './Card'
 
+
 function App() {
 
   const rando = Math.floor(Math.random() * 5)  
+  // setting the initial state for image and name
   const [resPic, setResPic] = 
   useState('https://images.unsplash.com/photo-1579364046732-c21c2177730d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')
   const [resName, setResName] = useState('Welcome')
   
+  // runs anytime a button is clicked
   function addLift(value){
     const result = lifts.filter(lift => lift.type === value)
     setResPic(result[rando].src)
@@ -29,6 +32,7 @@ function App() {
 
       <h6>please choose no more than 1 of the same exercise in a row</h6>
 
+      {/* calling our new component and passing the image and name values */}
       <Card pic={resPic} name={resName}/>
 
     </div>
