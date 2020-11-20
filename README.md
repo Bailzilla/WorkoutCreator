@@ -1,1 +1,1 @@
-# please open my-app to get started
+# please open exercisegenerator to get started
