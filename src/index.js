@@ -16,9 +16,9 @@ ReactDOM.render(
 
 let rand = Math.floor(Math.random() * 100)
 
-fetch("https://type.fit/api/quotes")
-  .then(response => response.json())
-  .then(data => document.getElementById('quote').innerHTML=('"'+(data[rand].text)+'" - '+ (data[rand].author)))
+// fetch("https://type.fit/api/quotes")
+//   .then(response => response.json())
+//   .then(data => document.getElementById('quote').innerHTML=('"'+(data[rand].text)+'" - '+ (data[rand].author)))
  
 
 
