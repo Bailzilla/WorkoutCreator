@@ -18,4 +18,5 @@ code {
 #quote, h6 {
   color: silver;
   stroke: slateblue;
+  text-decoration: steelblue;
 }
