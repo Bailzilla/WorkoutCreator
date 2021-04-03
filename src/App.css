@@ -20,7 +20,7 @@ h6 {
 .button {
   padding: 6px;
   background-color: rgb(62, 129, 230);
-  border-radius: 12px;
+  border-radius: 15px;
   transition-duration: 0.4s;
   max-width: 100%;
 }
