@@ -43,7 +43,7 @@ h6 {
 
 /* these queries enhance responsiveness by resizing the quote section and spreading out the buttons */
 
-@media (min-width: 550px) {
+@media (min-width: 60px) {
 
   #quote {
     font-size: 2rem;
